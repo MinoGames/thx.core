@@ -75,6 +75,9 @@ a `DateTime` type.
   @:from public static function fromTime(timestamp : Float) : DateTime
     return new DateTime(DateTimeUtc.fromTime(timestamp), Time.zero);
 
+  @:from public static function fromTimeLocal(timestamp : Float) : DateTime
+    return new DateTime(DateTimeUtc.fromTime(timestamp), localOffset());
+
 /**
 Converts a string into a `DateTime` value. The accepted format looks like this:
 ```
